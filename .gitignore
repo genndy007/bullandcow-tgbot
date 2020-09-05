@@ -1,0 +1,3 @@
+# some secrets
+.env
+secrets.go
