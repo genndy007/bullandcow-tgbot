@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -39,6 +40,8 @@ func IsInSlice(slice []rune, val rune) bool {
 
 func CheckBullsAndCows(guess, number string) [2]int {
 	bullsAndCows := [2]int{0, 0}
+	fmt.Println(guess)
+	fmt.Println(number)
 	for i := 0; i < 4; i++ {
 		if guess[i] == number[i] {
 			bullsAndCows[0]++
