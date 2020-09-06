@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -45,7 +44,7 @@ func GetUpdates() ([]UpdateT, error) {
 func SendMessage(chatId int, text string) error {
 	methodName := "/sendMessage"
 	query := methodName + "?chat_id=" + strconv.Itoa(chatId) + "&text=" + text
-	fmt.Println(query)
+
 	body, err := GetBody(query)
 	if err != nil {
 		return err
