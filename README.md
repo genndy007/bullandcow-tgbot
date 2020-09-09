@@ -4,6 +4,10 @@ Installation:
 
 You do not need to install it, it will be hosted by some service :)
 
+You can find this bot in Telegram:
+Name: BullAndCowBot
+Username: @bullandcow_bot
+
 Rules:
 --------------
 One player, the Chooser (bot in our case), thinks of a four-letter number and the other player, the Guesser, tries to guess it.
