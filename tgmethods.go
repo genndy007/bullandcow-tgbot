@@ -10,6 +10,7 @@ import (
 
 var baseUrl = "https://api.telegram.org/bot"
 
+// Gets body of http GET request
 func GetBody(methodName string) ([]byte, error) {
 	resp, err := http.Get(baseUrl + botToken + methodName)
 	if err != nil {

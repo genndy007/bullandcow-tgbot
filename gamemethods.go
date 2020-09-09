@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 )
 
+// Creates a number for player to guess
 func GenerateNumber() int {
 	// Very clever random number implementation :)
 	result := 0
@@ -25,10 +25,13 @@ func GenerateNumber() int {
 	return result
 
 }
+
+// Remove element from slice
 func RemoveFromSlice(slice []int, s int) []int {
 	return append(slice[:s], slice[s+1:]...)
 }
 
+// Check if element is in slice
 func IsInSlice(slice []rune, val rune) bool {
 	for _, item := range slice {
 		if item == val {
@@ -38,10 +41,9 @@ func IsInSlice(slice []rune, val rune) bool {
 	return false
 }
 
+// Method checks how many bulls and cows player has
 func CheckBullsAndCows(guess, number string) [2]int {
 	bullsAndCows := [2]int{0, 0}
-	fmt.Println(guess)
-	fmt.Println(number)
 	for i := 0; i < 4; i++ {
 		if guess[i] == number[i] {
 			bullsAndCows[0]++
