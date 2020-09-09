@@ -6,6 +6,14 @@ import (
 	"strings"
 )
 
+var rules string = "One player, the Chooser (a bot in our case), thinks of a four-letter word and the other player, the Guesser, tries to guess it" +
+
+	"At each turn the Guesser tries a four-letter word, and the Chooser says how close it is to the answer by giving:" +
+
+	"The number of Bulls - letters correct in the right position." +
+	"The number of Cows - letters correct but in the wrong position." +
+	"The Guesser tries to guess the answer in the fewest number of turns."
+
 func main() {
 	ChatIdAndNumber := make(map[int]int)
 	updates, err := GetUpdates()
@@ -20,17 +28,17 @@ func main() {
 				msgTxt := strings.TrimSpace(updates[i].Message.Text)
 				chatId := updates[i].Message.Chat.Id
 				if msgTxt == "/start" {
-					err = SendMessage(chatId, "Hello, it's bot for playing")
+					err = SendMessage(chatId, "Hello, it's bot for playing Bulls and Cows")
 					PrintError(err)
 				}
 				if msgTxt == "/newgame" {
-					err = SendMessage(chatId, "Ok, your game starts now")
+					err = SendMessage(chatId, "Ok, your game starts now, bot came up with a number for you!")
 					PrintError(err)
 					number := GenerateNumber()
 					ChatIdAndNumber[chatId] = number
 				}
 				if msgTxt == "/rules" {
-					err = SendMessage(chatId, "Here are the rules")
+					err = SendMessage(chatId, rules)
 					PrintError(err)
 				}
 				if number, ok := ChatIdAndNumber[chatId]; ok {
