@@ -6,12 +6,12 @@ import (
 	"strings"
 )
 
-var rules string = "One player, the Chooser (a bot in our case), thinks of a four-letter word and the other player, the Guesser, tries to guess it" +
+var rules string = "One player, the Chooser (a bot in our case), thinks of a four-letter number and the other player, the Guesser, tries to guess it" +
 
-	"At each turn the Guesser tries a four-letter word, and the Chooser says how close it is to the answer by giving:" +
+	"At each turn the Guesser tries a four-letter number, and the Chooser says how close it is to the answer by giving:" +
 
-	"The number of Bulls - letters correct in the right position." +
-	"The number of Cows - letters correct but in the wrong position." +
+	"The number of Bulls - digits correct in the right position." +
+	"The number of Cows - digits correct but in the wrong position." +
 	"The Guesser tries to guess the answer in the fewest number of turns."
 
 func main() {
