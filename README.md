@@ -15,5 +15,6 @@ The number of Cows - digits correct but in the wrong position.
 
 The Guesser tries to guess the answer in the fewest number of turns.
 
-P.S.
-Created just for reason of understanding telegram bot creating
+Why it was created
+-----------
+P.S. Created just for reason of understanding telegram bot creating
